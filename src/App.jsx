@@ -1,28 +1,16 @@
-import { useState, useEffect } from "react"
+import { Routes, Route } from "react-router-dom"
+import Navbar from "./components/Navbar"
+import Home from "./pages/Home"
+import About from "./pages/About"
 
-function App() {
-  const [gatito, setGatito] = useState(null)
-
-  // Fetch al cargar el componente
-  useEffect(() => {
-    fetch("https://api.thecatapi.com/v1/images/search")
-      .then(res => res.json())
-      .then(data => {
-        setGatito(data[0].url)
-      })
-      .catch(err => console.error(err))
-  }, [])
-
+export default function App() {
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <h1>🐱 Gatito random</h1>
-      {gatito ? (
-        <img src={gatito} alt="Un lindo gatito" style={{ maxWidth: "400px", borderRadius: "10px" }} />
-      ) : (
-        <p>Cargando gatito...</p>
-      )}
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </div>
   )
 }
-
-export default App
