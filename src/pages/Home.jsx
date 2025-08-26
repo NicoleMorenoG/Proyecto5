@@ -10,37 +10,38 @@ export default function Home() {
         .catch(console.error)
     }
 
-    useEffect(() => {
-    traerGatito()
-    }, [])
+    useEffect(() => { traerGatito() }, [])
 
     return (
-    <div style={{ textAlign: "center", padding: 20 }}>
-        <h1>🐱 Gatito random</h1>
+    <div className="min-h-screen bg-gray-50">
+        <nav className="max-w-4xl mx-auto px-4 py-6">
+        {/* el Navbar ya lo tienes; este wrapper solo da márgenes */}
+        </nav>
+
+        <main className="max-w-4xl mx-auto px-4 pb-16 text-center">
+        <h1 className="text-3xl font-extrabold mb-6">
+            🐱 Gatito random
+        </h1>
+
         {gatito ? (
-        <img 
-            src={gatito} 
-            alt="Un lindo gatito" 
-            style={{ maxWidth: 400, borderRadius: 10 }} 
-        />
+            <img
+            src={gatito}
+            alt="Un lindo gatito"
+            className="mx-auto rounded-xl shadow max-w-md w-full max-h-[70vh] object-contain"
+            />
         ) : (
-        <p>Cargando gatito...</p>
+            <p className="text-gray-600">Cargando gatito...</p>
         )}
-        <br /><br />
-        <button
-        onClick={traerGatito}
-        style={{
-            padding: "10px 20px",
-            borderRadius: 8,
-            border: "none",
-            background: "#4f46e5",
-            color: "#fff",
-            fontSize: "16px",
-            cursor: "pointer"
-        }}
-        >
-        Otro gatito 🐾
-        </button>
+
+        <div className="mt-6">
+            <button
+            onClick={traerGatito}
+            className="px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 active:scale-95 transition"
+            >
+            Otro gatito 🐾
+            </button>
+        </div>
+        </main>
     </div>
     )
 }

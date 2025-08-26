@@ -1,7 +1,6 @@
 export default function About() {
 
-throw new Error("Prueba del ErrorBoundary")
-
+    
     return (
     <div style={{ maxWidth: 720, margin: "0 auto", padding: 20 }}>
         <h1>Acerca de la app 😺</h1>
