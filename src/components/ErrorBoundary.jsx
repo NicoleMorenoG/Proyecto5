@@ -11,15 +11,15 @@ export default class ErrorBoundary extends React.Component {
     }
 
     componentDidCatch(error, errorInfo) {
-    console.error("Error capturado por ErrorBoundary:", error, errorInfo)
+    console.error("Error caught by ErrorBoundary:", error, errorInfo)
     }
 
     render() {
     if (this.state.hasError) {
         return (
         <div style={{ textAlign: "center", padding: 20, color: "red" }}>
-            <h2>⚠️ Ocurrió un error inesperado</h2>
-            <p>Por favor intenta recargar la página.</p>
+            <h2>⚠️ An unexpected error occurred</h2>
+            <p>Please try reloading the page.</p>
         </div>
         )
     }

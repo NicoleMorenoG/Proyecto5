@@ -13,9 +13,10 @@ export default function Navbar() {
     <div style={{ borderBottom: "1px solid #eee", background: "#fff" }}>
         <nav style={{ maxWidth: 960, margin: "0 auto", padding: 12, display: "flex", gap: 8, alignItems: "center" }}>
         <Link to="/" style={{ fontWeight: 700, marginRight: 10, textDecoration: "none", color: "#111" }}>
-            Gatitos React 🐱
+            React Kitties 🐱
         </Link>
-        <NavLink to="/" style={linkStyle} end>Inicio</NavLink>
+        <NavLink to="/" style={linkStyle} end>Home</NavLink>
+        <NavLink to="/facts" style={linkStyle}>Facts</NavLink>
         <NavLink to="/about" style={linkStyle}>About</NavLink>
         </nav>
     </div>

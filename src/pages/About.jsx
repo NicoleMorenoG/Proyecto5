@@ -1,15 +1,14 @@
 export default function About() {
-
-    
     return (
-    <div style={{ maxWidth: 720, margin: "0 auto", padding: 20 }}>
-        <h1>Acerca de la app 😺</h1>
-        <p>
-        Esta aplicación muestra imágenes aleatorias de gatitos usando la API pública <code>The Cat API</code>.
+    <div className="max-w-3xl mx-auto px-4 py-8">
+        <h1 className="text-3xl font-extrabold mb-6 text-center">About the App 🐾</h1>
+        <p className="mb-3">
+        This app shows random cat images using <code>The Cat API</code>, and random cat facts using <code>MeowFacts API</code>.
         </p>
         <p>
-        Fue creada para practicar React, hooks, rutas y consumo de APIs.
+        It was created to practice React Hooks, API consumption, React Router, and error handling with Error Boundaries.
         </p>
     </div>
     )
 }
+
